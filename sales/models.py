@@ -21,7 +21,7 @@ class Bill(models.Model):
 
 class Order(models.Model):
 
-    costumer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     products = models.ManyToManyField(Product, through='Producttype') 
     bill = models.OneToOneField(Bill, on_delete=models.CASCADE) 
 
